@@ -19,14 +19,20 @@
                 });
 
                 function draggedCallback(event) {
-                    scope.current = event.item.index - event.item.count;
+                    // some handling because of center mode
+                    if (event.item.index == 1) {
+                        scope.current = event.item.count - 1;
+                    } else if (event.item.index == event.item.count + 2) {
+                        scope.current = 0;
+                    } else {
+                        scope.current = event.item.index - 2;
+                    }
                     scope.$emit('sliderChanged', scope.current);
                 }
             },
             controller: ['$scope',function($scope) {
                 $timeout(function() {
                     $scope.$emit('sliderChanged', $scope.current);
-                    console.log($scope.current)
                 });
             }]
         }

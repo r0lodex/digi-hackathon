@@ -13,7 +13,10 @@
     function start($timeout, $state, $scope) {
         var start = this;
 
+        start.hero = 1;
+
         $scope.$on('sliderChanged', function(event, value) {
+            start.hero = value;
             console.log(value);
         });
 
@@ -31,7 +34,7 @@
         function starting() {
             var profile = {
                 name: start.username,
-                hero: 1
+                hero: start.hero
             }
             localStorage.profile = localStorage.profile || JSON.stringify(profile);
             $('.modal#getting-started').modal('hide');

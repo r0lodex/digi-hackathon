@@ -5,12 +5,25 @@
     rr.requires.push('raidrescue.home');
 
     angular
-        .module('raidrescue.home', [])
+        .module('raidrescue.home', ['ui.router'])
         .controller('homeCtrl', home);
 
-    home.$inject = [];
+    home.$inject = ['$state'];
 
-    function home() {
+    function home($state) {
         var home = this;
+
+        home.changeUser = changeUser;
+        home.profile = JSON.parse(localStorage.profile);
+
+        if (!home.profile) {
+            $state.go('start');
+        }
+
+        function changeUser() {
+            home.profile = localStorage.profile = '';
+            $('.modal#modal-setting').modal('hide');
+            $state.go('start');
+        }
     }
 })();
