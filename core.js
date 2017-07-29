@@ -7,3 +7,4 @@
 //=include "./node_modules/bootstrap/dist/js/bootstrap.js"
 
 //=include "./node_modules/owl.carousel/dist/owl.carousel.js"
+//=include "./node_modules/pubnub/dist/web/pubnub.js"
