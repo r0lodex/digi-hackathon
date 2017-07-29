@@ -26,7 +26,6 @@ gulp.task('default', function() {
 gulp.task('watch', function() {
     gulp.watch('./app/**/**/*.js', ['minify-js']);
     gulp.watch('./app/**/**/*.scss', ['minify-css']);
-    gulp.watch('./core.js', ['corejs']);
 });
 
 function minifycss() {
@@ -49,10 +48,10 @@ function concatJS() {
 }
 
 function consolidateJSFiles() {
-    return gulp.src('./app/**/**/*.js')
+    return gulp.src('./app/**/*.js')
         .pipe(concat('app.js'))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(uglify().on('error', gutil.log))
+        //.pipe(uglify().on('error', gutil.log))
         .pipe(gulp.dest('./dist/js'))
         .pipe(notify({ message: 'App JS minified' }))
 }

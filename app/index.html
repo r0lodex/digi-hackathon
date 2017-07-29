@@ -7,12 +7,9 @@
 
     <link rel="stylesheet" href="/dist/css/rr.css">
 
-    <script src="/dist/js/core.min.js"></script>
-    <script src="/dist/js/app.min.js"></script>
-
     <title>Raid &amp; Rescue</title>
 </head>
-<body class="app-body">
+<body class="app-body" ng-app="raidrescue">
     <div class="text-center">
         <img src="/images/logo-96x96.png" class="logo my-3" alt="">
         <h3 class="header mx-1">Welcome to R&R Agency</h3>
@@ -23,13 +20,17 @@
         <hr>
         <h2>Choose Your Hero</h2>
 
-        <div class="hero-selection">
+        <div class="hero-selection owl-carousel owl-theme" slider options="{ items: 1 }">
             <img src="/images/heroes/hero-1.gif" width="100%">
-            <div class="choose-hero-btn text-center">
-                <span class="btn btn-primary">Let's GO</span>
-            </div>
+            <img src="/images/heroes/hero-2.gif" width="100%">
+            <img src="/images/heroes/hero-3.gif" width="100%">
+        </div>
+
+        <div class="choose-hero-btn text-center">
+            <span class="btn btn-primary">Let's GO</span>
         </div>
     </div>
-
+    <script src="/dist/js/core.min.js"></script>
+    <script src="/dist/js/app.min.js"></script>
 </body>
 </html>
