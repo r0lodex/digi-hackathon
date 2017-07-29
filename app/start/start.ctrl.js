@@ -8,10 +8,14 @@
         .module('raidrescue.start', ['ui.router'])
         .controller('startCtrl', start);
 
-    start.$inject = ['$timeout', '$state'];
+    start.$inject = ['$timeout', '$state', '$scope'];
 
-    function start($timeout, $state) {
+    function start($timeout, $state, $scope) {
         var start = this;
+
+        $scope.$on('sliderChanged', function(event, value) {
+            console.log(value);
+        });
 
         if (!localStorage.profile) {
             $('.modal#getting-started').modal({
