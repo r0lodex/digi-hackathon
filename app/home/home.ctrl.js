@@ -14,6 +14,8 @@
         var home = this;
 
         home.changeUser = changeUser;
+        home.showShop = showShop;
+        home.showStat = showStat;
         home.profile = JSON.parse(localStorage.profile);
 
         if (!home.profile) {
@@ -26,6 +28,12 @@
             home.profile = localStorage.profile = '';
             $('.modal#modal-setting').modal('hide');
             $state.go('start');
+        }
+        function showShop() {
+            $('.modal#modal-showShop').modal('show');
+        }
+        function showStat() {
+            $('.modal#modal-showStat').modal('show');
         }
     }
 })();

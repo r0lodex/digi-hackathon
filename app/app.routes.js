@@ -26,21 +26,21 @@
             })
             .state('report', {
                 url: '/report',
-                templateUrl: '/app/home/home.html',
-                controller: 'homeCtrl',
-                controllerAs: 'home'
+                templateUrl: '/app/report/report.html',
+                controller: 'reportCtrl',
+                controllerAs: 'report'
             })
             .state('shop', {
                 url: '/shop',
-                templateUrl: '/app/home/home.html',
-                controller: 'homeCtrl',
-                controllerAs: 'home'
+                templateUrl: '/app/shop/shop.html',
+                controller: 'shopCtrl',
+                controllerAs: 'shop'
             })
             .state('statistic', {
                 url: '/statistic',
-                templateUrl: '/app/home/home.html',
-                controller: 'homeCtrl',
-                controllerAs: 'home'
+                templateUrl: '/app/statistic/statistic.html',
+                controller: 'statisticCtrl',
+                controllerAs: 'statistic'
             });
 
         $urlRouterProvider.otherwise('/');
