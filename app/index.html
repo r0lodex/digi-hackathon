@@ -20,19 +20,23 @@
 
         <hr>
 
-        <div class="hero-selection owl-carousel owl-theme" slider options="{ items: 1 }">
-            <img src="/images/heroes/hero-2.gif" width="100%">
-            <img src="/images/heroes/hero-3.gif" width="100%">
+        <h2>Choose your HERO.</h2>
 
-            <div class="choose-username input-group my-3">
-                <img src="/images/heroes/hero-1.gif" width="100%">
-                <input type="text" class="form-control text-center rounded" placeholder="NAME">
-            </div>
-
-            <div class="choose-hero-btn text-center">
-                <span class="btn btn-primary">Let's GO</span>
+        <div class="hero-selection owl-carousel owl-theme" slider options="{ items: 1.4, center: true, loop: true, padding: 100, startPosition: 1, dots: false }">
+            <div class="hero-card" ng-repeat="i in [1,2,3]">
+                <img ng-src="/images/heroes/hero-{{ i }}.gif" width="100%">
             </div>
         </div>
+
+        <div class="choose-username input-group mt-4">
+            <input type="text" class="form-control text-center rounded" placeholder="NAME">
+        </div>
+    </div>
+
+    <div class="footer-part bg-theme color-white">
+        <p class="get-started text-center my-2">
+            Let's get started!
+        </p>
     </div>
     <script src="/dist/js/core.min.js"></script>
     <script src="/dist/js/app.min.js"></script>

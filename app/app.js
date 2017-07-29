@@ -3,9 +3,14 @@
 
     angular
         .module('raidrescue', [])
+        .controller('rrController', rrController)
         .directive('slider', slider);
 
     slider.$inject = ['$timeout'];
+
+    function rrController() {
+        var rrCtrl = this;
+    }
 
     function slider($timeout) {
         return {

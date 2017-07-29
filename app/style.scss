@@ -2,11 +2,17 @@
 @import './node_modules/owl.carousel/src/scss/owl.carousel';
 @import './node_modules/owl.carousel/src/scss/owl.theme.default';
 
+.bg-theme { background-color: #660033; }
+.color-theme { color: #660033; }
+.color-white { color: #FFFFFF; }
+
 .rounded {
     border-radius: 30px;
 }
 
 .app-body {
+    background-color: RGBA(102, 0, 51, 0.1);
+
     .hero-selection {
         position: relative;
 
@@ -22,8 +28,15 @@
         width: 70%;
         margin: auto;
     }
+
+    .footer-part {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 }
 
 .dashboard-body {
-    
+    background: transparent;
 }
