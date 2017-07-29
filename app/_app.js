@@ -11,10 +11,23 @@
 
     function rootCtrl($rootScope) {
         var root = this;
-
         root.rootscope = $rootScope;
-
+        root.stream = { channel: 'dghcktn_channel' };
+        root.rootscope.publish = _publish;
         root.promptMsg = '';
+
+
+        var pubnub = new PubNub({
+            publishKey: 'pub-c-38ebf9a8-1a5a-4914-91fa-ae24e95a844e',
+            subscribeKey: 'sub-c-5b21cd86-747c-11e7-8153-0619f8945a4f'
+        });
+
+        function _publish(message) {
+            root.stream.message = message;
+            pubnub.publish(root.stream, function(status, response) {
+                console.log(status, response);
+            });
+        }
     }
 
     function slider($timeout) {
