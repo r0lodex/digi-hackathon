@@ -23,7 +23,7 @@ body {
     
     .nav-button {
         @extend .btn-primary;
-        padding: 10px 15px;
+        padding: 10px 0px;
         border-left: 1px solid white;
 
         &.active {
