@@ -1,7 +1,7 @@
 <section class="home mt-5 p-3">
-    <div class="status-info">
-        <div class="energy-bar mb-3">
-            <div class="label">Energy: Level 5</div>
+    <div class="status-info row">
+        <div class="energy-bar col mb-3">
+            <h6 class="label">Energy: Level 5</h6>
             <div class="progress text-center">
                 <div class="progress-bar progress-bar-striped bg-info" 
                     role="progressbar" 
@@ -10,15 +10,14 @@
                 40 / 100
             </div>
         </div>
-        <div class="credit mb-3">
-            <div class="label">Credit</div>
+        <div class="credit col mb-3">
+            <h6 class="label">Credit</h6>
             <div class="value">$$  15</div>
         </div>
     </div>
     <div class="setting">
         <a data-toggle="modal" data-target="#modal-setting"><span class="lnr lnr-cog"></span></a>
     </div>
-    <button ng-click="root.rootscope.publish('test')">Test Pubnub</button>
     <div class="home-content">
         <img ng-src="/images/heroes/hero-{{ home.profile.hero }}.gif" width="100%">
         <h4 class="username text-center" ng-bind="home.profile.name"></h4>
@@ -27,14 +26,18 @@
 </section>
 
 <div class="modal fade" id="modal-setting">
-    <div class="modal-dialog">
-        <div class="modal-content">
+    <div class="modal-dialog pt-5">
+        <div class="modal-content mt-5">
             <div class="modal-body">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
+                <h4>Setting</h4>
+                <hr>
                 <div class="setting-content text-center">
-                    <div class="btn btn-danger" ng-click="home.changeUser();">Change user</div>
+                    <div class="btn btn-info my-3" ng-click="root.rootscope.publish('test')">Test Pubnub</div>
+                    <br>
+                    <div class="btn btn-danger my-3" ng-click="home.changeUser();">Change user</div>
                 </div>
             </div>
         </div>

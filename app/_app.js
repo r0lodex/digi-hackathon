@@ -15,7 +15,12 @@
         root.stream = { channel: 'dghcktn_channel' };
         root.rootscope.publish = _publish;
         root.promptMsg = '';
+        $rootScope.selectedHero = '';
 
+        root.profile = JSON.parse(localStorage.profile);
+        if (root.profile) {
+            $rootScope.selectedHero = root.profile.hero;
+        }
 
         var pubnub = new PubNub({
             publishKey: 'pub-c-38ebf9a8-1a5a-4914-91fa-ae24e95a844e',
