@@ -16,12 +16,21 @@
     .hero-selection {
         position: relative;
 
-        .choose-hero-btn {
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 10px;
+        .active.center {
+            border: 5px solid #660033;
+
+            &:after {
+                position: absolute;
+                bottom: -7px;
+                content: "\e87f";
+                font-family: "Linearicons-Free";
+                color: green;
+                font-size: 3rem;
+                right: 0;
+                padding: 5px;
+            }
         }
+
     }
 
     .choose-username {
@@ -38,6 +47,9 @@
 
     .subtitle-hero {
         color: #5E1348;
+    }
+    .header {
+        padding: 0 4rem;
     }
 }
 

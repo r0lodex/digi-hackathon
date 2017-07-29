@@ -18,8 +18,22 @@
         });
 
         if (!localStorage.profile) {
-            $('.modal#getting-started').modal('show');
+            $('.modal#getting-started').modal({
+                backdrop: 'static',
+                keyboard: false
+            });
         } else {
+            $state.go('home');
+        }
+
+        start.starting = starting;
+
+        function starting() {
+            var profile = {
+                name: start.username,
+                hero: 1
+            }
+            localStorage.profile = localStorage.profile || JSON.stringify(profile);
             $state.go('home');
         }
     }
