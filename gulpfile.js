@@ -29,7 +29,7 @@ gulp.task('watch', function() {
 });
 
 function minifycss() {
-    return gulp.src('./app/style.scss')
+    return gulp.src('./app/**/*.scss')
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(concat('rr.css'))
         .pipe(prefix())
