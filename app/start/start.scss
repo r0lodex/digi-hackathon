@@ -11,10 +11,10 @@
             &:after {
                 @extend .lnr;
                 position: absolute;
-                bottom: -7px;
+                bottom: 1px;
                 content: "\e87f";
                 color: green;
-                font-size: 3rem;
+                font-size: 2.5rem;
                 right: 0;
                 padding: 5px;
             }
