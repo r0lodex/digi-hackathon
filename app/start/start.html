@@ -1,6 +1,6 @@
-<div class="modal fade" id="getting-started">
+<div class="modal fade" id="getting-started" data-keyboard="false">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content py-3">
             <div class="text-center">
                 <img src="/images/logo-96x96.svg" class="logo my-3" alt="" width="24%">
                 <h5 class="header mx-1">Are you ready to rescure the world?</h5>
@@ -18,8 +18,14 @@
                     </div>
                 </div>
 
-                <div class="choose-username input-group mt-4">
-                    <input type="text" class="form-control text-center rounded" placeholder="NAME">
+                <div class="choose-username input-group my-4">
+                    <input type="text" class="form-control text-center rounded" placeholder="Your name..." ng-model="start.username">
+                </div>
+
+                <div class="confirm-button">
+                    <div class="btn btn-primary" ng-click="start.starting();">
+                        Let's get started
+                    </div>
                 </div>
             </div>
         </div>
