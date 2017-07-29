@@ -8,10 +8,10 @@
             border: 5px solid #660033;
 
             &:after {
+                @extend .lnr;
                 position: absolute;
                 bottom: -7px;
                 content: "\e87f";
-                font-family: "Linearicons-Free";
                 color: green;
                 font-size: 3rem;
                 right: 0;
