@@ -11,19 +11,22 @@
 
                 <h4 class="subtitle-hero my-3">Step 1: Choose your HERO</h4>
 
-                <div class="hero-selection owl-carousel owl-theme ng-cloak" slider current="start.hero" options="{ items: 1.4, center: true, loop: true, padding: 100, startPosition: 1, dots: false }">
+                <div class="hero-selection owl-carousel owl-theme" slider current="start.hero" options="{ items: 1.4, center: true, loop: true, padding: 100, startPosition: 1, dots: false }">
                     <div class="hero-card" ng-repeat="i in [1,2,3]">
                         <img ng-src="/images/heroes/hero-{{ i - 1 }}.gif" width="100%">
                     </div>
                 </div>
 
                 <!--anonymous user report, we just need the code of current user to be reference of, can be random name-->
-                <div class="choose-username input-group my-4">
-                    <input type="text" class="form-control text-center rounded" placeholder="Your name..." ng-model="start.username">
+                <div class="my-4">
+                    <div class="choose-username input-group" ng-click="start.promptMsg = '';">
+                        <input type="text" class="form-control text-center rounded" placeholder="Your name..." ng-model="start.username">
+                    </div>
+                    <div class="text-danger" ng-bind="start.promptMsg"></div>
                 </div>
 
                 <div class="confirm-button">
-                    <div class="btn btn-primary" ng-click="start.starting();">
+                    <div class="btn btn-primary" ng-click="start.starting(root);">
                         Let's get started
                     </div>
                 </div>

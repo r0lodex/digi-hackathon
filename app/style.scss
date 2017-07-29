@@ -8,6 +8,12 @@
 .color-theme { color: #660033; }
 .color-white { color: #FFFFFF; }
 
+body {
+    &.hero-0 { background-color: #FB9B02; }
+    &.hero-1 { background-color: #7EDC7D; }
+    &.hero-2 { background-color: #71DCFF; }
+}
+
 .rounded {
     border-radius: 30px;
 }
@@ -15,6 +21,7 @@
 .nav-button {
     @extend .btn-primary;
     padding: 20px;
+    border-left: 1px solid white;
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {

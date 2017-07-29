@@ -24,6 +24,24 @@
                 controller: 'homeCtrl',
                 controllerAs: 'home'
             })
+            .state('report', {
+                url: '/report',
+                templateUrl: '/app/home/home.html',
+                controller: 'homeCtrl',
+                controllerAs: 'home'
+            })
+            .state('shop', {
+                url: '/shop',
+                templateUrl: '/app/home/home.html',
+                controller: 'homeCtrl',
+                controllerAs: 'home'
+            })
+            .state('statistic', {
+                url: '/statistic',
+                templateUrl: '/app/home/home.html',
+                controller: 'homeCtrl',
+                controllerAs: 'home'
+            });
 
         $urlRouterProvider.otherwise('/');
     }

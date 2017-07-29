@@ -8,9 +8,9 @@
         .module('raidrescue.home', ['ui.router'])
         .controller('homeCtrl', home);
 
-    home.$inject = ['$state'];
+    home.$inject = ['$state', '$rootScope'];
 
-    function home($state) {
+    function home($state, $rootScope) {
         var home = this;
 
         home.changeUser = changeUser;
@@ -18,6 +18,8 @@
 
         if (!home.profile) {
             $state.go('start');
+        } else {
+            $rootScope.selectedHero = home.profile.hero;
         }
 
         function changeUser() {

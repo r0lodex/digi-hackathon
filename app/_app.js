@@ -3,9 +3,19 @@
 
     angular
         .module('raidrescue', [])
+        .controller('rootCtrl', rootCtrl)
         .directive('slider', slider);
 
+    rootCtrl.$inject = ['$rootScope'];
     slider.$inject = ['$timeout'];
+
+    function rootCtrl($rootScope) {
+        var root = this;
+
+        root.rootscope = $rootScope;
+
+        root.promptMsg = '';
+    }
 
     function slider($timeout) {
         return {

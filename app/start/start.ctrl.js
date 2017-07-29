@@ -31,7 +31,12 @@
 
         start.starting = starting;
 
-        function starting() {
+        function starting(root) {
+            start.promptMsg = '';
+            if (!start.username) {
+                start.promptMsg = 'Please choose a name. Just a random one if you want to go anonymous...';
+                return;
+            }
             var profile = {
                 name: start.username,
                 hero: start.hero
