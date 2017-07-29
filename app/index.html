@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="rrApp">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,12 +12,13 @@
 
     <title>Raid &amp; Rescue</title>
 </head>
-<body class="app-body">
+<body class="app-body" ng-controller="rrController as rrCtrl">
     <div class="text-center">
         <img src="/images/logo-96x96.png" alt="">
         <h3>Welcome to R&R Agency</h3>
         <p class="text-muted small">
-            Villain is out there and it's our responsibility to fight them. Choose your companion and it's the time now.'
+            Villain is out there and it's our responsibility to fight them. 
+            Choose your companion and it's time to act
         </p>
 
         <hr>
@@ -29,6 +30,10 @@
             <div class="choose-hero-btn text-center">
                 <span class="btn btn-primary">Let's GO</span>
             </div>
+        </div>
+
+        <div class="choose-username input-group my-3">
+            <input type="text" class="form-control text-center rounded" placeholder="NAME">
         </div>
     </div>
 

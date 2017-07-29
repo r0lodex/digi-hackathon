@@ -1,5 +1,9 @@
 @import './node_modules/bootstrap/scss/bootstrap.scss';
 
+.rounded {
+    border-radius: 30px;
+}
+
 .app-body {
     .hero-selection {
         position: relative;
@@ -10,6 +14,11 @@
             right: 0;
             bottom: 10px;
         }
+    }
+
+    .choose-username {
+        width: 70%;
+        margin: auto;
     }
 }
 
