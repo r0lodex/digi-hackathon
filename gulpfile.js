@@ -26,6 +26,7 @@ gulp.task('default', function() {
 gulp.task('watch', function() {
     gulp.watch('./app/**/**/*.js', ['minify-js']);
     gulp.watch('./app/**/**/*.scss', ['minify-css']);
+    gulp.watch('./core.js', ['corejs']);
 });
 
 function minifycss() {

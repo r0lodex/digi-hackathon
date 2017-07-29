@@ -28,6 +28,7 @@
     "gulp-install": "^1.1.0",
     "jquery": "^3.2.1",
     "owl.carousel": "^2.2.0",
+    "pubnub": "^4.13.0",
     "tether": "^1.4.0"
   },
   "devDependencies": {
