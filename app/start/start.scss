@@ -1,0 +1,46 @@
+.start {
+    background-color: RGBA(102, 0, 51, 0.1);
+
+    .hero-selection {
+        position: relative;
+
+        .active.center {
+            border: 5px solid #660033;
+
+            &:after {
+                position: absolute;
+                bottom: -7px;
+                content: "\e87f";
+                font-family: "Linearicons-Free";
+                color: green;
+                font-size: 3rem;
+                right: 0;
+                padding: 5px;
+            }
+        }
+
+    }
+
+    .choose-username {
+        width: 70%;
+        margin: auto;
+    }
+
+    .footer-part {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .subtitle-hero {
+        color: #5E1348;
+    }
+    .header {
+        padding: 0 4rem;
+    }
+}
+
+.dashboard-body {
+    background: transparent;
+}
