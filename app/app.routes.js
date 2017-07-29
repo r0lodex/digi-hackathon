@@ -36,11 +36,11 @@
                 controller: 'shopCtrl',
                 controllerAs: 'shop'
             })
-            .state('statistic', {
-                url: '/statistic',
-                templateUrl: '/app/statistic/statistic.html',
-                controller: 'statisticCtrl',
-                controllerAs: 'statistic'
+            .state('stats', {
+                url: '/stats',
+                templateUrl: '/app/stats/stats.html',
+                controller: 'statsCtrl',
+                controllerAs: 'stats'
             });
 
         $urlRouterProvider.otherwise('/');
