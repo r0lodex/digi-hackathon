@@ -18,6 +18,12 @@
                 controller: 'startCtrl',
                 controllerAs: 'start'
             })
+            .state('home', {
+                url: '/home',
+                templateUrl: '/app/home/home.html',
+                controller: 'homeCtrl',
+                controllerAs: 'home'
+            })
 
         $urlRouterProvider.otherwise('/');
     }
