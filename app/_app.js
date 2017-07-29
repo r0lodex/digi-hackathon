@@ -17,7 +17,7 @@
         root.promptMsg = '';
         $rootScope.selectedHero = '';
 
-        root.profile = JSON.parse(localStorage.profile);
+        root.profile = localStorage.profile ? JSON.parse(localStorage.profile) : {};
         if (root.profile) {
             $rootScope.selectedHero = root.profile.hero;
         }
