@@ -1,0 +1,21 @@
+@import './node_modules/bootstrap/scss/bootstrap';
+@import './node_modules/owl.carousel/src/scss/owl.carousel';
+@import './node_modules/owl.carousel/src/scss/owl.theme.default';
+
+@import './node_modules/bootstrap/scss/variables';
+
+@import './app/lnr';
+
+#map {
+    height: 400px;
+}
+
+.victim_mark {
+    background: rgba(red, 0.2);
+    padding: 2px;
+}
+
+.prey_mark {
+    background: red;
+    padding: 5px;
+}

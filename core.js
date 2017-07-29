@@ -8,3 +8,5 @@
 
 //=include "./node_modules/owl.carousel/dist/owl.carousel.js"
 //=include "./node_modules/pubnub/dist/web/pubnub.js"
+
+//=include "./node_modules/ngmap/build/scripts/ng-map.no-dependency.js"

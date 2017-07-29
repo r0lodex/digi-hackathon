@@ -33,6 +33,9 @@ gulp.task('default', function() {
 gulp.task('watch', function() {
     gulp.watch('./app/**/**/*.js', ['minify-js']);
     gulp.watch('./app/**/**/*.scss', ['minify-css']);
+    gulp.watch('./dashboard/**/**/*.js', ['minify-dash-js']);
+    gulp.watch('./dashboard/**/**/*.scss', ['minify-dash-css']);
+    
     gulp.watch('./core.js', ['corejs']);
 });
 
