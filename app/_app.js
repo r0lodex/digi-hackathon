@@ -16,7 +16,8 @@
                     var options = scope.options;
                     options.onDragged = draggedCallback;
                     $(element).owlCarousel(options);
-                });
+                    $('.owl-carousel').show();
+                }, 500);
 
                 function draggedCallback(event) {
                     // some handling because of center mode
