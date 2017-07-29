@@ -18,10 +18,18 @@ body {
     border-radius: 30px;
 }
 
-.nav-button {
-    @extend .btn-primary;
-    padding: 20px;
-    border-left: 1px solid white;
+.nav {
+    padding: 0 0.9rem;
+    
+    .nav-button {
+        @extend .btn-primary;
+        padding: 10px 15px;
+        border-left: 1px solid white;
+
+        &.active {
+            @extend .bg-theme;
+        }
+    }
 }
 
 .owl-carousel, [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
