@@ -1,32 +1,34 @@
-<div class="modal fade" id="getting-started" data-keyboard="false">
-    <div class="modal-dialog">
-        <div class="modal-content py-3">
-            <div class="text-center">
-                <h3 class="header mx-1">Welcome to R&R Agency</h3>
-                <p class="text-muted small mx-3">
-                    Villain is out there and it's our responsibility to fight them. Choose your companion and it's the time now.'
-                </p>
+<section class="start">
+    <div class="modal fade" id="getting-started" data-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content py-3">
+                <div class="text-center">
+                    <h3 class="header mx-1">Welcome to R&R Agency</h3>
+                    <p class="text-muted small mx-3">
+                        Villain is out there and it's our responsibility to fight them. Choose your companion and it's the time now.'
+                    </p>
 
-                <hr>
+                    <hr>
 
-                <h4 class="subtitle-hero my-3">Step 1: Choose your HERO</h4>
+                    <h4 class="subtitle-hero my-3">Step 1: Choose your HERO</h4>
 
-                <div class="hero-selection owl-carousel owl-theme" slider options="{ items: 1.4, center: true, loop: true, padding: 100, startPosition: 1, dots: false }">
-                    <div class="hero-card" ng-repeat="i in [1,2,3]">
-                        <img ng-src="/images/heroes/hero-{{ i }}.gif" width="100%">
+                    <div class="hero-selection owl-carousel owl-theme" slider options="{ items: 1.4, center: true, loop: true, padding: 100, startPosition: 1, dots: false }">
+                        <div class="hero-card" ng-repeat="i in [1,2,3]">
+                            <img ng-src="/images/heroes/hero-{{ i }}.gif" width="100%">
+                        </div>
                     </div>
-                </div>
 
-                <div class="choose-username input-group my-4">
-                    <input type="text" class="form-control text-center rounded" placeholder="Your name..." ng-model="start.username">
-                </div>
+                    <div class="choose-username input-group my-4">
+                        <input type="text" class="form-control text-center rounded" placeholder="Your name..." ng-model="start.username">
+                    </div>
 
-                <div class="confirm-button">
-                    <div class="btn btn-primary" ng-click="start.starting();">
-                        Let's get started
+                    <div class="confirm-button">
+                        <div class="btn btn-primary" ng-click="start.starting();">
+                            Let's get started
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>

@@ -30,6 +30,7 @@
                 hero: 1
             }
             localStorage.profile = localStorage.profile || JSON.stringify(profile);
+            $('.modal#getting-started').modal('hide');
             $state.go('home');
         }
     }
