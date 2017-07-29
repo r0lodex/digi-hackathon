@@ -27,10 +27,13 @@
             subscribeKey: 'sub-c-5b21cd86-747c-11e7-8153-0619f8945a4f'
         });
 
-        function _publish(message) {
+        function _publish(message, callback) {
             root.stream.message = message;
             pubnub.publish(root.stream, function(status, response) {
-                console.log(status, response);
+                // console.log(status, response);
+                if (callback && callback instanceof 'function') {
+                    callback(status, response);
+                }
             });
         }
     }

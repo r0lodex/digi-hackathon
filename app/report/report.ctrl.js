@@ -24,7 +24,11 @@
                 console.log('location not detected');
                 return;
             }
-            root.rootscope.publish(JSON.stringify(report.form));
+
+            var callback = function(status, response) {
+                alert('asdfasdf');
+            }
+            root.rootscope.publish(JSON.stringify(report.form), callback);
         }
     }
 })();

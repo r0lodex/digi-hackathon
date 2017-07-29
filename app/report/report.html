@@ -1,11 +1,14 @@
-<section class="report mt-5 p-3">
-<form ng-submit="report.publish(root);">
-        <h5>Incident Location</h5>
-        <div class="map-selector">
-            <p class="text-muted">sfasfsdfsafasf</p>
-            iframe
+<section class="report my-5 p-3 pb-5">
+    <form ng-submit="report.publish(root);" class="pt-3">
+        <div class="map-selector form-group mb-5">
+            <h5>Incident Location</h5>
+            <!--<p class="text-muted">sfasfsdfsafasf</p>-->
+            <div class="map">
+                <img src="http://www.placehold.it/300x300" width="100%">
+            </div>
+            <input type="text" disabled="disabled" class="form-control" id="locationCoordinate" placeholder="Location..." ng-model="report.form.location">
         </div>
-        <div class="crime-case">
+        <div class="crime-case mb-5">
             <h5>Type of case:</h5>
             <div class="row">
                 <div class="col-4 py-2" ng-repeat="i in [1,2,3,4,5,6]">
@@ -13,10 +16,24 @@
                 </div>
             </div>
         </div>
-        <div class="cta text-center">
-            <div class="btn btn-main submit-btn my-3">
+        <div class="cta text-center mb-5">
+            <button class="btn btn-main submit-btn" type="submit">
                 Publish
-            </div>
+            </button>
         </div>
     </form>
 </section>
+
+<div class="modal fade" id="prompt">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <p ng-bind="root.promptMsg"></p>
+                <span type="btn btn-primary" class="close" data-dismiss="modal"></span>
+            </div>
+        </div>
+    </div>
+</div>
