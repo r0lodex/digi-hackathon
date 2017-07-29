@@ -15,7 +15,8 @@
 
         report.publish = publish;
         report.form = {
-            location: '123.112,1231.111',
+            location: '[3.0656373,101.5694867]]',
+            
             case: 2,
         }
 
