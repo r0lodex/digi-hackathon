@@ -14,10 +14,12 @@
         $stateProvider
             .state('start', {
                 url: '/',
-                templateUrl: '/app/start.html',
-                controller: '',
-                controllerAs: ''
+                templateUrl: '/app/start/start.html',
+                controller: 'startCtrl',
+                controllerAs: 'start'
             })
+
+        $urlRouterProvider.otherwise('/');
     }
 
 })();
