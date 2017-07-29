@@ -1,0 +1,29 @@
+{
+  "name": "digi-hackathon",
+  "version": "1.0.0",
+  "description": "Gaming Reporting App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r0lodex/digi-hackathon.git"
+  },
+  "keywords": [
+    "digi",
+    "hackathon"
+  ],
+  "author": "tech@hermo.my",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/r0lodex/digi-hackathon/issues"
+  },
+  "homepage": "https://github.com/r0lodex/digi-hackathon#readme",
+  "dependencies": {
+    "angular": "^1.6.5",
+    "angular-resource": "^1.6.5",
+    "angular-ui-router": "^1.0.3",
+    "bootstrap": "^4.0.0-alpha.6"
+  }
+}
