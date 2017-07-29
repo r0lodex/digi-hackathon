@@ -12,5 +12,19 @@
 
     function report($state, $rootScope) {
         var report = this;
+
+        report.publish = publish;
+        report.form = {
+            location: '123.112,1231.111',
+            case: 2,
+        }
+
+        function publish(root) {
+            if (!report.form.location) {
+                console.log('location not detected');
+                return;
+            }
+            root.rootscope.publish(JSON.stringify(report.form));
+        }
     }
 })();

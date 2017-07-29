@@ -1,21 +1,23 @@
+@import './app/lnr';
 section.report {
     .crime-case {
         .disable-for-now {
-            opacity: 0.5;
+            opacity: 0.7;
         }
 
         .active {
             border: 5px solid #660033;
+            border-radius: 15px;
+            position: relative;
 
             &:after {
-                // @extend .lnr;
+                @extend .lnr;
                 position: absolute;
-                bottom: -7px;
+                bottom: 1px;
+                right: 0px;
                 content: "\e87f";
                 color: green;
-                font-size: 3rem;
-                right: 0;
-                padding: 5px;
+                font-size: 1.5rem;
             }
         }
     }
