@@ -1,10 +1,9 @@
 (function() {
     'use strict';
 
-
     angular
         .module('raidrescue', [])
-        .directive('slider', slider)
+        .directive('slider', slider);
 
     slider.$inject = ['$timeout'];
 
@@ -15,9 +14,8 @@
             link: function(scope, element, attrs) {
                 $timeout(function() {
                     $(element).owlCarousel(scope.options)
-                })
+                });
             }
         }
     }
-
-})
+})();
