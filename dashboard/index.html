@@ -3,43 +3,46 @@
 <head>
     <title>Reach &amp; Rescue Dashboard</title>
     
-    <link rel="stylesheet" href="../dist/css/dashboard.css">
+    <link rel="stylesheet" href="../dist/dashboard/dashboard.css">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 
     <script src="../dist/js/core.min.js"></script>
-
-    
-    <script>
-        var pubnub = new PubNub({
-            publishKey: 'pub-c-38ebf9a8-1a5a-4914-91fa-ae24e95a844e',
-            subscribeKey: 'sub-c-5b21cd86-747c-11e7-8153-0619f8945a4f'
-        });
-
-        pubnub.addListener({
-            status: function(statusEvent) {
-                if (statusEvent.category === "PNConnectedCategory") {
-                    // publishSampleMessage();
-                    console.log(statusEvent);
-                }
-            },
-            message: function(message) {
-                console.log("New Message!!", message);
-            },
-            presence: function(presenceEvent) {
-                // handle presence
-            }
-        })      
-        
-        console.log("Subscribing..");
-
-        pubnub.subscribe({
-            channels: ['dghcktn_channel']
-        });
-
-    </script>
+    <script src="../dist/dashboard/dashboard.min.js"></script>
 
 </head>
-<body> 
-    <h1>Reach &amp; Rescue</h1>
+<body ng-app="dashboard">
+    <section ng-controller="dashCtrl as dash" class="container-fluid">
+        <div class="jumbotron">
+            <h1>Reach &amp; Rescue Realtime</h1>
+
+            <div class="row">
+            <div class="col-8">
+                <div map-lazy-load="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR-b5_iExDljyQ_e5T-vwtvmVkaP2NR-k"">
+                    <ng-map id="map" zoom="20" center="[3.0682165, 101.5676738]" zoom-to-include-markers="auto">
+                        <custom-marker ng-repeat="p in dash.positions" position="{{ p.pos }}" title="coords: {{ p.pos }}">
+                            <div class="victim_mark" ng-class="{{ p.class }}"><span class="lnr-warning"></span> Reported!</div>
+                        </custom-marker>
+                    </ng-map>
+                </div>
+            </div>
+            <div class="col-4">
+                <p class="m-0">Suspected Traficking Base</p>
+                <small class="text-muted">Computerized Calculation. Please be aware!</small>
+                <hr>
+
+                <div class="alert alert-warning small">More reports required for the calculation to be valid.</div>
+
+                
+
+                <hr>
+                <p>Location Log (<span ng-bind="dash.positions.length"></span> lodged)</p>
+                <div style="max-height: 100px; overflow: auto;">
+                    <div ng-repeat="d in dash.positions">
+                        <kbd ng-bind="d.pos"></kbd>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
