@@ -1,1 +1,18 @@
 @import './node_modules/bootstrap/scss/bootstrap.scss';
+
+.app-body {
+    .hero-selection {
+        position: relative;
+
+        .choose-hero-btn {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 10px;
+        }
+    }
+}
+
+.dashboard-body {
+    
+}
