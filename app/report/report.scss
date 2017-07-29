@@ -1,3 +1,22 @@
 section.report {
-    
+    .crime-case {
+        .disable-for-now {
+            opacity: 0.5;
+        }
+
+        .active {
+            border: 5px solid #660033;
+
+            &:after {
+                // @extend .lnr;
+                position: absolute;
+                bottom: -7px;
+                content: "\e87f";
+                color: green;
+                font-size: 3rem;
+                right: 0;
+                padding: 5px;
+            }
+        }
+    }
 }
