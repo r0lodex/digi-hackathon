@@ -5,12 +5,18 @@
     rr.requires.push('raidrescue.start');
 
     angular
-        .module('raidrescue.start', [])
+        .module('raidrescue.start', ['ui.router'])
         .controller('startCtrl', start);
 
-    start.$inject = ['$timeout'];
+    start.$inject = ['$timeout', '$state'];
 
-    function start($timeout) {
+    function start($timeout, $state) {
         var start = this;
+
+        if (!localStorage.profile) {
+            $('.modal#getting-started').modal('show');
+        } else {
+            $state.go('home');
+        }
     }
 })();
