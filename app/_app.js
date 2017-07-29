@@ -39,7 +39,7 @@
                     var options = scope.options;
                     options.onDragged = draggedCallback;
                     $(element).owlCarousel(options);
-                    $('.owl-carousel').show();
+                    $(element).show();
                 }, 500);
 
                 function draggedCallback(event) {

@@ -32,15 +32,14 @@
         start.starting = starting;
 
         function starting(root) {
-            start.promptMsg = '';
-            if (!start.username) {
-                start.promptMsg = 'Please choose a name. Just a random one if you want to go anonymous...';
-                return;
-            }
+
+            start.username = start.username ? start.username : 'Anonymous';
+
             var profile = {
                 name: start.username,
                 hero: start.hero
             }
+
             localStorage.profile = localStorage.profile || JSON.stringify(profile);
             $('.modal#getting-started').modal('hide');
             $state.go('home');
