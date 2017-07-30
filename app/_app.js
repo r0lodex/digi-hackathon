@@ -31,7 +31,7 @@
             root.stream.message = message;
             pubnub.publish(root.stream, function(status, response) {
                 // console.log(status, response);
-                if (callback && callback instanceof 'function') {
+                if (callback) {
                     callback(status, response);
                 }
             });

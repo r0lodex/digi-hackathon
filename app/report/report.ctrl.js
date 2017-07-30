@@ -13,11 +13,24 @@
     function report($state, $rootScope) {
         var report = this;
 
+        report.mapData = ['[3.065111,101.5673372]',
+                        '[3.0681898,101.5682709]',
+                        '[3.0689631,101.569723]',
+                        '[3.0682088,101.5644919]',
+                        '[3.0682088,101.5644919]'];
+
+        report.generateLocation = generateLocation;
         report.publish = publish;
         report.form = {
-            location: '[3.0656373,101.5694867]]',
-            
+            location: '',
             case: 2,
+        }
+        report.locationMap = '/images/map/empty.jpg';
+
+        function generateLocation() {
+            var random = Math.floor((Math.random() * report.mapData.length));
+            report.form.location = report.mapData[random];
+            report.locationMap = '/images/map/map-' + random + '.jpg';
         }
 
         function publish(root) {
@@ -27,9 +40,9 @@
             }
 
             var callback = function(status, response) {
-                alert('asdfasdf');
+                alert('Report submitted.');
             }
-            root.rootscope.publish(JSON.stringify(report.form), callback);
+            root.rootscope.publish(JSON.stringify(report.form.location), callback);
         }
     }
 })();

@@ -3,8 +3,8 @@
         <div class="map-selector form-group mb-5">
             <h5>Incident Location</h5>
             <!--<p class="text-muted">sfasfsdfsafasf</p>-->
-            <div class="map">
-                <img src="http://www.placehold.it/300x300" width="100%">
+            <div class="map" ng-click="report.generateLocation();">
+                <img ng-src="{{ report.locationMap }}" width="100%">
             </div>
             <input type="text" disabled="disabled" class="form-control" id="locationCoordinate" placeholder="Location..." ng-model="report.form.location">
         </div>
