@@ -35,6 +35,7 @@
         }
 
         function publish(root) {
+            var report = this;
             if (!report.form.location) {
                 console.log('location not detected');
                 return;
@@ -45,6 +46,8 @@
             }
 
             root.rootscope.publish(JSON.stringify(report.form.location), callback);
+
+            report.generateLocation();
         }
 
         function closeModal() {
