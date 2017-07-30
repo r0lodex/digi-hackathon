@@ -45,13 +45,12 @@
         function getMarkers(stream_data) {
             console.log(dash.positions.length);
 
+            var raw = { pos: JSON.parse(stream_data) }
+            dash.positions.push(raw);
+            
             if (dash.positions.length == 10) {
                 dash.target.push({ pos: [3.0656373,101.5694867] });
-            } else {
-                var raw = { pos: JSON.parse(stream_data) }
-                dash.positions.push(raw);
             }
-
             NgMap.getMap().then(function(map) {
                 dash.map = map;
             });

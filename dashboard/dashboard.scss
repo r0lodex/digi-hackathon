@@ -20,4 +20,22 @@
     padding: 5px;
     border: 2px solid yellow;
     color: white;
+
+
+    -webkit-animation-name: flickering; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: flickering;
+    animation-duration: 1s;
+
+    /* Safari 4.0 - 8.0 */
+    @-webkit-keyframes flickering {
+        from {border-color: red;}
+        to {border-color: yellow;}
+    }
+
+    /* Standard syntax */
+    @keyframes flickering {
+        from {border-color: red;}
+        to {border-color: yellow;}
+    }
 }
