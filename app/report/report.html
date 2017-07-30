@@ -17,7 +17,7 @@
             <h5>Type of case:</h5>
             <div class="row">
                 <div class="col-4 py-2" ng-repeat="i in [1,2,3,4,5,6]">
-                    <div ng-class="i === 2 ? 'active' : 'disable-for-now'"><img ng-src="/images/crime_case/case-0{{ i }}.svg" width="100%"></div>
+                    <div ng-class="i === 2 ? 'active' : 'disable-for-now'"><img ng-src="../images/crime_case/case-0{{ i }}.svg" width="100%"></div>
                 </div>
             </div>
         </div>
@@ -29,14 +29,14 @@
     </form>
 </section>
 
-<div class="modal fade" id="prompt">
+<div class="modal fade" id="prompt" data-keyboard="false">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" ng-click="report.closeModal();" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <p ng-bind="root.promptMsg"></p>
+                <p class="pt-5 text-center">Report submitted. <br>Thank you for your contribution.</p>
                 <span type="btn btn-primary" class="close" data-dismiss="modal"></span>
             </div>
         </div>

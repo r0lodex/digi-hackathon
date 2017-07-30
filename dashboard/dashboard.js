@@ -14,6 +14,7 @@
             { pos: [3.0682165,101.5676738] },
             { pos: [3.0655467,101.5724599] },
         ];
+        dash.target = [];
 
         var pubnub = new PubNub({
             publishKey: 'pub-c-38ebf9a8-1a5a-4914-91fa-ae24e95a844e',
@@ -45,7 +46,7 @@
             console.log(dash.positions.length);
 
             if (dash.positions.length == 10) {
-                dash.positions.push({ pos: [3.0656373,101.5694867] })
+                dash.target.push({ pos: [3.0656373,101.5694867] });
             } else {
                 var raw = { pos: JSON.parse(stream_data) }
                 dash.positions.push(raw);

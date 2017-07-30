@@ -20,7 +20,10 @@
                 <div map-lazy-load="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR-b5_iExDljyQ_e5T-vwtvmVkaP2NR-k">
                     <ng-map id="map" zoom="20" center="[3.0682165, 101.5676738]" zoom-to-include-markers="auto">
                         <custom-marker ng-repeat="p in dash.positions" position="{{ p.pos }}" title="coords: {{ p.pos }}">
-                            <div class="victim_mark" ng-class="{{ p.class }}"><span class="lnr-warning"></span> Reported!</div>
+                            <div class="victim_mark"><span class="lnr-warning"></span> Reported!</div>
+                        </custom-marker>
+                        <custom-marker ng-repeat="t in dash.target" position="{{ t.pos }}" title="coords: {{ t.pos }}">
+                            <div class="prey_mark"><span class="lnr-danger"></span> Targeted!!!</div>
                         </custom-marker>
                     </ng-map>
                 </div>

@@ -21,16 +21,17 @@
 
         report.generateLocation = generateLocation;
         report.publish = publish;
+        report.closeModal = closeModal;
         report.form = {
             location: '',
             case: 2,
         }
-        report.locationMap = '/images/map/empty.jpg';
+        report.locationMap = '../images/map/empty.jpg';
 
         function generateLocation() {
             var random = Math.floor((Math.random() * report.mapData.length));
             report.form.location = report.mapData[random];
-            report.locationMap = '/images/map/map-' + random + '.jpg';
+            report.locationMap = '../images/map/map-' + random + '.jpg';
         }
 
         function publish(root) {
@@ -40,10 +41,15 @@
             }
 
             var callback = function(status, response) {
-                alert('Report submitted.');
-                $state.go('home');
+                $('.modal#prompt').modal('show');
             }
+
             root.rootscope.publish(JSON.stringify(report.form.location), callback);
+        }
+
+        function closeModal() {
+            $('.modal#prompt').modal('hide');
+            $state.go('home');
         }
     }
 })();
