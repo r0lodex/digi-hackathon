@@ -5,6 +5,11 @@
             <!--<p class="text-muted">sfasfsdfsafasf</p>-->
             <div class="map" ng-click="report.generateLocation();">
                 <img ng-src="{{ report.locationMap }}" width="100%">
+                <div style="position: absolute;
+                        top: 0;
+                        background: RGBA(0,0,0,0.3);
+                        padding: 1rem;
+                        width: 100%;">Click on the image to generate an image</div>
             </div>
             <input type="text" disabled="disabled" class="form-control" id="locationCoordinate" placeholder="Location..." ng-model="report.form.location">
         </div>

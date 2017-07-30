@@ -41,6 +41,7 @@
 
             var callback = function(status, response) {
                 alert('Report submitted.');
+                $state.go('home');
             }
             root.rootscope.publish(JSON.stringify(report.form.location), callback);
         }

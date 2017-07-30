@@ -1,5 +1,8 @@
 @import './app/lnr';
 section.report {
+    .map {
+        position: relative;
+    }
     .map-selector {
         .map { min-height: 300px; }
     }

@@ -17,7 +17,7 @@
 
             <div class="row">
             <div class="col-8">
-                <div map-lazy-load="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR-b5_iExDljyQ_e5T-vwtvmVkaP2NR-k"">
+                <div map-lazy-load="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR-b5_iExDljyQ_e5T-vwtvmVkaP2NR-k">
                     <ng-map id="map" zoom="20" center="[3.0682165, 101.5676738]" zoom-to-include-markers="auto">
                         <custom-marker ng-repeat="p in dash.positions" position="{{ p.pos }}" title="coords: {{ p.pos }}">
                             <div class="victim_mark" ng-class="{{ p.class }}"><span class="lnr-warning"></span> Reported!</div>
